@@ -20,7 +20,6 @@ class MyDocument extends Document {
                         content="https://cdn.julka.fit/google-thumbnail.jpg"
                     />
                     <link rel="shortcut icon" href="https://cdn.julka.fit/favicon.png" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <meta property="og:title" content="Julia Migdalska - Dietetyka" />
                     <meta property="og:type" content="website" />
                     <meta property="og:url" content="https://julka.fit" />
