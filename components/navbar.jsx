@@ -3,9 +3,9 @@ import BrandImage from './brandImage'
 import NavLink from './navlink'
 import SocialLink from './socialLink'
 
-function MainNavbar() {
+function MainNavbar({sticky}) {
     return (
-        <Navbar expand="md" variant="light">
+        <Navbar expand="md" variant="light" bg="white" sticky={sticky}>
             <Container>
                 <BrandImage></BrandImage>
                 <Navbar.Toggle aria-controls="navbar" />
