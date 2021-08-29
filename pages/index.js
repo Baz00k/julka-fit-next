@@ -1,7 +1,8 @@
-import MainNavbar from "../components/navbar";
+import DefaultLayout from "../layouts/defaultLayout"
 
 export default function Home() {
   return (
-    <MainNavbar/>
+    <DefaultLayout>
+    </DefaultLayout>
   )
 }
