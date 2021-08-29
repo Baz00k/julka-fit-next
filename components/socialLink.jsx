@@ -7,9 +7,8 @@ function NavLink({ href, iconURL, altTxt }) {
             <Nav.Link target="_blank" rel="noreferrer">
                 <img
                     src={iconURL}
-                    width="30px"
-                    height="30px"
                     alt={altTxt}
+                    className="icon"
                 />
             </Nav.Link>
         </Link>

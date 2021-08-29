@@ -1,1 +1,23 @@
+// COLORS
+$main: #ffd9ea;
+
+//SIZES
+$icon-size: 1.5em;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "./indexbanner.scss";
+
+body {
+  overflow-x: hidden;
+}
+
+body>div{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+    width: $icon-size;
+    height: $icon-size;
+}
