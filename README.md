@@ -12,8 +12,8 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-If you want to create a new build: 
+If you want to export a new static build: 
 
 ```bash
-npm run build
+npm run export
 ```
