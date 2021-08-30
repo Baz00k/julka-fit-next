@@ -1,5 +1,5 @@
 import { Col, Card } from 'react-bootstrap'
-import TransparentButton from './transparentButton';
+import OutlineButton from './outlineButton';
 
 function CustomCard({ title, href, buttonText, children }) {
     return (
@@ -10,7 +10,7 @@ function CustomCard({ title, href, buttonText, children }) {
                     <Card.Text className='py-3'>
                         {children}
                     </Card.Text>
-                    <TransparentButton href={href}>{buttonText}</TransparentButton>
+                    <OutlineButton href={href}>{buttonText}</OutlineButton>
                 </Card.Body>
             </Card>
         </Col>
