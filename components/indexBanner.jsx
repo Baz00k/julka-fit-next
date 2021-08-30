@@ -1,5 +1,3 @@
-import { Container, Row, Col, Image } from 'react-bootstrap'
-
 function IndexBanner() {
     return (
         <div className="banner">
