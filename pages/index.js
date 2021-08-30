@@ -1,12 +1,14 @@
 import DefaultLayout from "../layouts/defaultLayout"
 import IndexBanner from "../components/indexBanner"
 import SectionWithTitle from "../components/sectionWithTitle"
-import TransparentButton from "../components/transparentButton"
+import OutlineButton from "../components/outlineButton"
+import IndexColumns from "../components/indexColumns"
+import NewsletterBanner from "../components/newsletterBanner"
 
 export default function Home() {
   return (
     <DefaultLayout>
-      <IndexBanner />
+      <IndexBanner/>
       <SectionWithTitle title="O mnie">
         <p>
           Nazywam&nbsp;się Julka&nbsp;Migdalska.<br />Pomagam kobietom zmieniać
@@ -15,8 +17,10 @@ export default function Home() {
           czas spędzam w&nbsp;kuchni&nbsp;-&nbsp;gotując i&nbsp;fotografując
           jedzenie.
         </p>
-        <TransparentButton href="/o-mnie">Poznaj mnie lepiej!!!</TransparentButton>
+        <OutlineButton href="/o-mnie">Poznaj mnie lepiej!!!</OutlineButton>
       </SectionWithTitle>
+      <IndexColumns/>
+      <NewsletterBanner/>
     </DefaultLayout>
   )
 }
