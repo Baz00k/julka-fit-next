@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "export": "next build && next export",
+    "export": "next build && next-sitemap --config next-sitemap.config.js && next export",
     "build": "next build",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "lint": "next lint"
   },
@@ -14,6 +15,7 @@
     "autoprefixer": "^10.3.3",
     "bootstrap": "^5.0.0-beta3",
     "next": "11.1.0",
+    "next-sitemap": "^1.6.164",
     "postcss": "^8.3.6",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^6.7.0",
