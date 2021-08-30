@@ -12,14 +12,17 @@ body {
   overflow-x: hidden;
 }
 
-body>div{
+body > div {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-
 .icon {
-    width: $icon-size;
-    height: $icon-size;
+  width: $icon-size;
+  height: $icon-size;
+}
+
+.card {
+  border: none;
 }

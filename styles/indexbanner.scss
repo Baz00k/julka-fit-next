@@ -48,3 +48,15 @@
     }
   }
 }
+
+.index-banner-img {
+  aspect-ratio: 1/1;
+  min-width: 13em;
+  max-width: 23em;
+  min-height: 13em;
+  max-height: 23em;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  right: 60%;
+}
