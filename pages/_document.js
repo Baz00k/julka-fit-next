@@ -32,6 +32,7 @@ class MyDocument extends Document {
                         content="Cześć! Jestem Julka. Nauczę Cię jeść zdrowo - z głową."
                     />
                     <link rel="canonical" href="https://julka.fit/" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" />
                 </Head>
                 <body>
                     <Main />
