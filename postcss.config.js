@@ -16,8 +16,8 @@ module.exports = {
         defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
         safelist: {
           standard: ["html", "body", /nav/, /@media/, /col/, /row/, /bg-/, /btn/],
-          deep: ["html", "body", /nav/, /@media/, /col/, /row/, /bg-/, /btn/],
-          greedy: [],
+          deep: [/nav/, /@media/, /col/, /row/, /bg-/, /btn/],
+          // greedy: [],
         }
       }
     ]
