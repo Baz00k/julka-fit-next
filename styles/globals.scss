@@ -4,15 +4,18 @@ $main: #ffd9ea;
 //SIZES
 $icon-size: 1.5em;
 $display-font-weight: 400;
+$btn-padding-y: 0.375rem;
+$btn-padding-x: 1rem;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "./indexbanner.scss";
+@import "newsletterbanner.scss";
 
 body {
   overflow-x: hidden;
 }
 
-body > div {
+body > div:first-child {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,4 +28,16 @@ body > div {
 
 .card {
   border: none;
+}
+
+.btn {
+  min-width: 9em;
+}
+
+.btn-outline-dark {
+  background-color: #ffff;
+}
+
+.font-abhaya {
+  font-family: "Abhaya Libre", serif;
 }
