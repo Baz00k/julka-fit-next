@@ -7,7 +7,7 @@ function MainNavbar({sticky}) {
     return (
         <Navbar expand="md" variant="light" bg="white" sticky={sticky}>
             <Container>
-                <BrandImage></BrandImage>
+                <BrandImage/>
                 <Navbar.Toggle aria-controls="navbar" />
                 <Navbar.Collapse id="navbar">
                     <Nav className='ms-auto h5 text-center float-md-right'>
