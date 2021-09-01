@@ -1,11 +1,9 @@
-import DefaultLayout from "../layouts/defaultLayout"
+import WorkInProgress from "../layouts/wip";
 
-function Placeholder() {
+function Blog() {
     return (
-        <DefaultLayout>
-            <h1>Placeholder</h1>
-        </DefaultLayout>
+        <WorkInProgress/>
     );
 }
 
-export default Placeholder;
+export default Blog;
