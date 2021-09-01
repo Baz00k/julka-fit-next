@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import CenteredModal from './centeredModal'
+import NewsletterForm from './newsletterForm';
 import OutlineButton from './outlineButton'
 
 function NewsletterBanner() {
@@ -25,7 +26,9 @@ function NewsletterBanner() {
                     </Col>
                 </Row>
             </Container>
-            <CenteredModal show={modalShow} onHide={() => setModalShow(false)}>Test modal</CenteredModal>
+            <CenteredModal show={modalShow} onHide={() => setModalShow(false)}>
+                <NewsletterForm/>
+            </CenteredModal>
         </section>
     );
 }
