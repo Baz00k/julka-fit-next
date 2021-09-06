@@ -5,7 +5,7 @@ function IndexColumns() {
     return (
         <section>
             <Container className='my-5'>
-                <Row xs={1} md={3}>
+                <Row xs={1} md={3} className='justify-content-center'>
 
                     <CustomCard title='Oferta' href='/oferta' buttonText='Dowiedz się więcej!'>
                         Pomogę Ci zmienić nawyki żywieniowe i sprawię, że zakochasz się w
