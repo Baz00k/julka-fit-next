@@ -15,7 +15,7 @@ module.exports = {
         content: ["./src/**/*.{js,jsx,ts,tsx}", "./pages/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}", "./layouts/**/*.{js,jsx,ts,tsx}", './node_modules/react-bootstrap/**/*.{js,jsx,ts,tsx}'],
         defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
         safelist: {
-          standard: ["html", "body", "navbar", /^nav-/, "container", "col", /row/, "bg-white", /btn/],
+          standard: ["html", "body", "navbar", "invalid-feedback", /^nav-/, "container", "col", /row/, "bg-white", /btn/],
           deep: [/^navbar/, /@media/, /col/, /row/, /^btn/, /^modal/],
           // greedy: [],
         }
