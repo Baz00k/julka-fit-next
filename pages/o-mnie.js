@@ -16,7 +16,7 @@ function Omnie() {
                     <Col xs={12} md={6} lg={4} xl={3}>
                         <img
                             className="img-fluid"
-                            src="https://cdn.julka.fit/o-mnie_desktop.jpg"
+                            src="../o-mnie.png"
                             alt="banner_desktop"
                         />
                     </Col>
