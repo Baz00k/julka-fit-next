@@ -5,7 +5,7 @@ import OutlineButton from "../components/outlineButton"
 import IndexColumns from "../components/indexColumns"
 import NewsletterBanner from "../components/newsletterBanner"
 
-export default function Home() {
+function Home() {
   return (
     <DefaultLayout>
       <IndexBanner/>
@@ -22,5 +22,7 @@ export default function Home() {
       <IndexColumns/>
       <NewsletterBanner/>
     </DefaultLayout>
-  )
+  );
 }
+
+export default Home;
