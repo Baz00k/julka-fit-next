@@ -12,7 +12,8 @@ $btn-padding-x: 1rem;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "./indexbanner.scss";
-@import "newsletterbanner.scss";
+@import "./newsletterbanner.scss";
+@import "./accordions.scss";
 
 body {
   overflow-x: hidden;
