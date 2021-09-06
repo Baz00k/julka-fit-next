@@ -1,11 +1,53 @@
 import DefaultLayout from "../layouts/defaultLayout"
-import { Container, Row, Col, Form } from "react-bootstrap";
-import { useRouter } from 'next/router';
+import { Container, Row, Col } from "react-bootstrap"
+import { useRouter } from 'next/router'
+import { useEffect, useRef, useState } from "react"
+import Link from "next/link"
 import PageTitle from "../components/pageTitle";
+import * as yup from 'yup'
+import ContactForm from "../components/contactForm"
+
+const schema = yup.object().shape({
+    fullname: yup.string().min(3, "Proszę wpisać poprawne imię i nazwisko!").max(50, "Imię i nazwisko za długie. Proszę wpisać poprawne imię i nazwisko!").matches(/[A-Za-z]/, "Proszę wpisać imię i nazwisko!").required("Proszę wpisać imię i nazwisko!"),
+    phone: yup.string().min(9, "Numer telefonu za krótki! Proszę wpisać poprawny numer telefonu!").max(9, "Numer telefonu za długi! Proszę wpisać poprawny numer telefonu!").matches(/[0-9]{9}/, "Proszę wpisać poprawny numer telefonu!").required("Proszę wpisać numer telefonu!"),
+    email: yup.string().email("Proszę wpisać poprawny adres e-mail!").required("Proszę wpisać adres e-mail!"),
+    message: yup.string().min(10, "Wiadomość za krótka, proszę umieścić więcej informacji!").required("Wiadomość nie może być pusta!"),
+    topic: yup.number().integer().min(1, "Proszę wybrać temat wiadomości!")
+});
 
 function Kontakt() {
+
+    const [topic, setTopic] = useState(0);
+    const [info, setInfo] = useState(false);
+    const [warning, setWarning] = useState(false);
     const router = useRouter();
-    const { temat } = router.query;
+    const formRef = useRef();
+
+    useEffect(() => {
+        const { temat } = router.query;
+        switch (temat) {
+            case "jadlospis":
+                setTopic(1);
+                break;
+
+            case "jadlospis-14":
+                setTopic(2);
+                break;
+
+            case "wspolpraca":
+                setTopic(3);
+                break;
+
+            default:
+                setTopic(0);
+                break;
+        }
+    }, [router.query]);
+
+    useEffect(() => {
+        formRef.current.setFieldValue("topic", topic);
+    }, [topic])
+
     return (
         <DefaultLayout title='Kontakt - Julia Migdalska'>
             <Container className='justify-content-center'>
@@ -19,40 +61,83 @@ function Kontakt() {
                             className="img-fluid"
                             width={90}
                         />
+                        <p className={topic ? "d-none" : undefined}>
+                            Hej! Cieszę się, że tu trafiłaś! Zanim wyślesz mi wiadomość,
+                            przeczytaj proszę zakładkę&nbsp;
+                            <Link href="/oferta">oferta. </Link>
+                            Znajdziesz tam wszelkie informację na temat&nbsp;tego,
+                            co&nbsp;mogę dla Ciebie zrobić i&nbsp;w&nbsp;jaki sposób mogę
+                            Ci&nbsp;pomóc&nbsp;:)
+                        </p>
+                        <p className={topic ? undefined : "d-none"}>
+                            Hej! Cieszę się, że tu trafiłaś! W tym miejscu możesz napisać
+                            do mnie wiadomość w sprawie współpracy na którą się zdecydowałaś,
+                            a ja skontaktuję się z tobą najszybciej jak będę mogła!
+                        </p>
                     </Col>
                     <Col>
-                        <Form method='post' action="https://mautic.julka.fit/form/submit?formId=3" encType="multipart/form-data">
-                            <Form.Group controlId='imie' className="mb-3">
-                                <Form.Label>Imię</Form.Label>
-                                <Form.Control type='text' name='mauticform[imie]' placeholder='Wpisz swoje imię!' required />
-                            </Form.Group>
-                            <Form.Group controlId='email' className="mb-3">
-                                <Form.Label>E-mail</Form.Label>
-                                <Form.Control type='email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name='mauticform[email]' placeholder='Wpisz swój e-mail!' required />
-                            </Form.Group>
-                            <Form.Group className="mb-3">
-                                <Form.Control type='hidden' name="mauticform[formId]" value="3" />
-                                <p className='mb-3'><b>Uwaga! Ważne! Potwierdź zapis!</b></p>
-                                <p>
-                                    <small>
-                                        Zapisując&nbsp;się do&nbsp;newslettera, wyrażasz zgodę
-                                        na&nbsp;otrzymywanie informacji o&nbsp;nowościach,
-                                        promocjach, produktach i&nbsp;usługach&nbsp;Julka.fit.
-                                        Administratorem Twoich danych osobowych będzie
-                                        Julia&nbsp;Migdalska z&nbsp;siedzibą
-                                        w&nbsp;Warszawie&nbsp;(04-113) przy ulicy
-                                        Łukowskiej&nbsp;2a&nbsp;m.49. Twoje dane będą przetwarzane
-                                        do celów związanych z&nbsp;wysyłką&nbsp;newslettera.
-                                    </small>
-                                </p>
+                        <ContactForm
+                            innerRef={formRef}
+                            validationSchema={schema}
+                            onSubmit={(values, actions) => submitToAPI(values, actions)}
+                            initialValues={{
+                                fullname: '',
+                                phone: "",
+                                email: "",
+                                message: "",
+                                topic: topic
+                            }}
+                            topic={topic} />
 
-                            </Form.Group>
-                        </Form>
+                        {info && <div className='alert alert-success text-center my-3'>Wiadomość została wysłana!</div>}
+                        {warning && <div className='alert alert-danger text-center my-3'>Podczas wysyłania wiadomości wystąpił błąd. Spróbuj ponownie później!</div>}
                     </Col>
                 </Row>
             </Container>
         </DefaultLayout>
     );
+
+    async function submitToAPI(values, actions) {
+        setInfo(false);
+        setWarning(false);
+
+        let data = { ...values };
+        switch (values.topic) {
+            case "1":
+                data.topic = "Indywidualny jadłospis – 7 dni";
+                break;
+            case "2":
+                data.topic = "Indywidualny jadłospis – 14 dni";
+                break;
+            case "3":
+                data.topic = "Współpraca indywidualna miesięczna";
+                break;
+            case "4":
+                data.topic = "Inne";
+                break;
+
+            default:
+                break;
+        }
+        const settings = {
+            method: 'POST',
+            headers: {
+                'contentType': 'application/json'
+            },
+            mode: 'no-cors',
+            body: JSON.stringify(data)
+        }
+        const response = await fetch("https://api.julka.fit/contact", settings);
+
+        if (response) {
+            setInfo(true);
+            actions.resetForm();
+        } else {
+            setWarning(true);
+        }
+
+        return;
+    }
 }
 
 export default Kontakt;
