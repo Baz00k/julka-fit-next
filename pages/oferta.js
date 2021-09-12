@@ -74,7 +74,7 @@ function Oferta() {
                 </Row>
             </Container>
             <ContainerWithTitle title="Jak to wygląda w praktyce?">
-                <Accordion>
+                <Accordion className="p-md-3">
                     <Accordion.Item eventKey={0}>
                         <Accordion.Header>Indywidualny jadłospis 7/14 dni</Accordion.Header>
                         <Accordion.Body>
