@@ -13,10 +13,10 @@ function Omnie() {
                         <h1 className='mt-5 font-abhaya'><b>“Zdrowe podejście to podstawa”</b> -&nbsp;</h1>
                         <h2 className='h4'>ale... czy zawsze tak u mnie było?</h2>
                     </Col>
-                    <Col xs={12} md={6} lg={4} xl={3}>
+                    <Col xs={12} md={6} lg={4} xl={3} className="p-5 p-md-3 pt-md-5">
                         <img
                             className="img-fluid"
-                            src="../o-mnie.png"
+                            src="../o-mnie.jpg"
                             alt="banner_desktop"
                         />
                     </Col>
