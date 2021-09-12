@@ -13,7 +13,6 @@ function DefaultLayout({ title = 'Julia Migdalska - Dietetyka', children }) {
             router.asPath.indexOf('?') > 0 ? router.asPath.indexOf('?') : router.asPath.length,
             router.asPath.indexOf('#') > 0 ? router.asPath.indexOf('#') : router.asPath.length
         ]);
-        console.log(CANONICAL_DOMAIN + router.asPath.substring(0, _pathSliceLength))
         return `https://${CANONICAL_DOMAIN + router.asPath.substring(0, _pathSliceLength)}/`;
     }
 
