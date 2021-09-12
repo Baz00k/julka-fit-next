@@ -1,7 +1,7 @@
 .banner {
   display: flex;
   justify-content: center;
-  margin-bottom: 10em;
+  margin-bottom: 11em;
 }
 
 @include media-breakpoint-down(md) {
@@ -21,9 +21,11 @@
   font-family: "Abhaya Libre", serif;
   padding: 1.5em;
   text-align: center;
-  min-width: 18em;
+  width: 95vw;
+  height: 95vw;
+  // min-width: 18em;
   max-width: 28em;
-  min-height: 18em;
+  // min-height: 18em;
   max-height: 28em;
   position: relative;
 

@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@600&display=swap");
 
 // COLORS
-$main: #ffd9ea;
-$secondary: $main;
+$main: #FFF3F7;
+$secondary: darken($main, 2);
 
 //SIZES
 $icon-size: 1.5em;
@@ -43,12 +43,12 @@ body > div:first-child {
 }
 
 a {
-  color: #d64485;
+  color: #c43977;
   text-decoration: none;
 }
 
 a:hover {
-  color: #ac0b53;
+  color: #99094a;
 }
 
 .invalid-feedback {
