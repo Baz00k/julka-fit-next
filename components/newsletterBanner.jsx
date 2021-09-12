@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import CenteredModal from './centeredModal'
-import NewsletterForm from './newsletterForm';
+import NewsletterForm from './newsletterForm'
 import OutlineButton from './outlineButton'
 
 function NewsletterBanner() {
