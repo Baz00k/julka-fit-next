@@ -31,7 +31,6 @@ class MyDocument extends Document {
                         property="og:description"
                         content="Cześć! Jestem Julka. Nauczę Cię jeść zdrowo - z głową."
                     />
-                    <link rel="canonical" href="https://julka.fit/" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                 </Head>
                 <body>
