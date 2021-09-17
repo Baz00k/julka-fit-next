@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@600;800&family=Abril+Fatface&display=swap');
 
 // COLORS
-$main: #FFF3F7;
+$main: #fff3f7;
 $secondary: darken($main, 2);
 
 //SIZES
@@ -14,6 +14,7 @@ $btn-padding-x: 1rem;
 @import "./indexbanner.scss";
 @import "./newsletterbanner.scss";
 @import "./accordions.scss";
+@import "./shop.scss";
 
 body {
   overflow-x: hidden;
@@ -40,6 +41,10 @@ body > div:first-child {
 
 .font-abhaya {
   font-family: "Abhaya Libre", serif;
+}
+
+.font-abril {
+  font-family: "Abril Fatface", cursive;
 }
 
 a {
