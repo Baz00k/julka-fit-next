@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { Nav } from 'react-bootstrap'
 
-function NavLink({href, name, children}) {
+function NavLink({href, name, path, children}) {
     return (
         <Link href={href} passHref>
-            <Nav.Link>
+            <Nav.Link active={path == href}>
                 {name}
                 {children}
             </Nav.Link>
