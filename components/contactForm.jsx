@@ -71,7 +71,7 @@ function ContactForm({topic, ...props}) {
                                     as="textarea"
                                     placeholder="Wpisz swoją wiadomość"
                                     maxLength="1200"
-                                    style={{ height: '100px' }}
+                                    style={{ height: '200px' }}
                                 />
                             </FloatingLabel>
                             {touched.message && errors.message && <Form.Control.Feedback type="invalid">{errors.message}</Form.Control.Feedback>}
