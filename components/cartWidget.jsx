@@ -14,7 +14,7 @@ function CartWidget() {
         setItemCount(cart.products.length || 0);
         if (!cart.fromStorage) {
             setAnimate(true);
-            const id = setTimeout(() => setAnimate(false), 1500);
+            const id = setTimeout(() => setAnimate(false), 500);
             return () => clearTimeout(id);
         }
     }, [cart]);
