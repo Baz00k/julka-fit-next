@@ -15,12 +15,12 @@ function MainNavbar({ sticky }) {
                 <Navbar.Toggle aria-controls="navbar" />
                 <Navbar.Collapse id="navbar">
                     <Nav className='ms-auto h5 text-center float-md-right'>
-                        <NavLink href={'/o-mnie'} name="O Mnie" path={path}></NavLink>
-                        <NavLink href={'/blog'} name="Blog" path={path}></NavLink>
-                        <NavLink href={'/sklep'} name="Sklep" path={path}></NavLink>
-                        <NavLink href={'/oferta'} name="Oferta" path={path}></NavLink>
-                        <NavLink href={'/kontakt'} name="Kontakt" path={path}></NavLink>
-                        <SocialLink href='https://www.instagram.com/julka_migdalska/' iconURL='https://cdn.julka.fit/instagram.svg' altTxt='Instagram'></SocialLink>
+                        <NavLink href={'/o-mnie'} name="O Mnie" path={path} />
+                        <NavLink href={'/blog'} name="Blog" path={path} />
+                        <NavLink href={'/sklep'} name="Sklep" path={path} />
+                        <NavLink href={'/oferta'} name="Oferta" path={path} />
+                        <NavLink href={'/kontakt'} name="Kontakt" path={path} />
+                        <SocialLink href='https://www.instagram.com/julka_migdalska/' iconURL='https://cdn.julka.fit/instagram.svg' altTxt='Instagram' />
                     </Nav>
                 </Navbar.Collapse>
             </Container>
