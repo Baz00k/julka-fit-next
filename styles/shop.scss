@@ -139,3 +139,21 @@
     font-size: 1.8rem;
     padding: 0;
 }
+
+.cart-button {
+    position: relative;
+    width: 52px;
+    margin: 0 auto;
+    transition: all 500ms ease-in-out;
+}
+
+.animate-cart {
+    transform: scale(1.5);
+}
+
+.cart-badge {
+    font-size: 0.6em;
+    position: absolute;
+    right: -5px;
+    top: 25px;
+}
