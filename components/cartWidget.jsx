@@ -8,11 +8,11 @@ function CartWidget() {
 
     const { cart } = useCart();
     const [itemCount, setItemCount] = useState(0);
-    let [animate, setAnimate] = useState(false);
+    const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
         setItemCount(cart.products.length || 0);
-        if (!animate) {
+        if (!animate && !cart.fromStorage) {
             setAnimate(true);
             setTimeout(() => setAnimate(false), 500);
         }

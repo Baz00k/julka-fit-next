@@ -2,7 +2,8 @@ import { createContext, useContext, useReducer, useEffect } from 'react'
 import { getStorageItem, setStorageItem } from './storage'
 
 const defaultCart = {
-    products: []
+    products: [],
+    fromStorage: true
 }
 
 export const CartContext = createContext();
@@ -33,6 +34,7 @@ export function useCartState() {
 
 function cartReducer(state, action) {
     let newCart = { ...state };
+    newCart.fromStorage = false;
     switch (action.type) {
         case 'add':
             if (newCart.products.includes(action.payload)) {
@@ -51,6 +53,7 @@ function cartReducer(state, action) {
         case 'getFromStorage':
             let storageCart = getStorageItem('cart');
             if (storageCart && storageCart.products) {
+                storageCart.fromStorage = true;
                 return storageCart;
             }
             setStorageItem('cart', defaultCart);
