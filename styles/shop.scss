@@ -157,3 +157,13 @@
     right: -5px;
     top: 25px;
 }
+
+.cart-item-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 60px;
+    min-height: 100px;
+    max-width: 80px;
+    max-height: 150px;
+}
