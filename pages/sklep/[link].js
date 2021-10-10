@@ -1,9 +1,7 @@
 import ShopLayout from "../../layouts/shopLayout"
 import getProductsList from "../../utils/getProductsList"
-import { Container, Row, Col, ButtonGroup, Button } from "react-bootstrap"
-import OutlineButton from '../../components/outlineButton'
-import { FaShoppingCart } from 'react-icons/fa'
-import addToCart from "../../utils/addToCart"
+import { Container, Row, Col } from "react-bootstrap"
+import BuyProductButton from "../../components/buyProductButton"
 
 const ShopItem = ({ link, name, unit_amount, description, id, images }) => {
 
@@ -23,10 +21,7 @@ const ShopItem = ({ link, name, unit_amount, description, id, images }) => {
                             <p className="product-description">
                                 {description}
                             </p>
-                            <ButtonGroup className="my-5 w-100">
-                                <OutlineButton onClick={() => addToCart(id)} className='button-buy'>Kupuję!</OutlineButton>
-                                <Button variant="outline-dark" style={{ minWidth: 0}} onClick={() => addToCart(id)}><FaShoppingCart size={26} /></Button>
-                            </ButtonGroup>
+                            <BuyProductButton id={id}></BuyProductButton>
                         </Col>
                         <Col className='col-xl-4 m-xl-4 p-2 gx-0 d-flex justify-content-center'>
                             <div className="cover-background">
