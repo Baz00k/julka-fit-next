@@ -12,9 +12,10 @@ function CartWidget() {
 
     useEffect(() => {
         setItemCount(cart.products.length || 0);
-        if (!animate && !cart.fromStorage) {
+        if (!cart.fromStorage) {
             setAnimate(true);
-            setTimeout(() => setAnimate(false), 500);
+            const id = setTimeout(() => setAnimate(false), 1500);
+            return () => clearTimeout(id);
         }
     }, [cart]);
 
