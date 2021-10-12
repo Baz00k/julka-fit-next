@@ -2,8 +2,12 @@ import ShopLayout from "../../layouts/shopLayout"
 import getProductsList from "../../utils/getProductsList"
 import { Container, Row, Col } from "react-bootstrap"
 import BuyProductButton from "../../components/buyProductButton"
+import { useState } from "react"
+import AddToCartToast from "../../components/addToCartToast"
 
-const ShopItem = ({ link, name, unit_amount, description, id, images }) => {
+const ShopItem = ({ name, unit_amount, description, id, images }) => {
+
+    const [showNotification, setShowNotification] = useState(false);
 
     return (
         <ShopLayout>
@@ -21,7 +25,7 @@ const ShopItem = ({ link, name, unit_amount, description, id, images }) => {
                             <p className="product-description">
                                 {description}
                             </p>
-                            <BuyProductButton id={id}></BuyProductButton>
+                            <BuyProductButton id={id} onAddToCart={() => setShowNotification(true)}></BuyProductButton>
                         </Col>
                         <Col className='col-xl-4 m-xl-4 p-2 gx-0 d-flex justify-content-center'>
                             <div className="cover-background">
@@ -32,6 +36,7 @@ const ShopItem = ({ link, name, unit_amount, description, id, images }) => {
                     </Row>
                 </section>
             </Container>
+            <AddToCartToast onClose={() => setShowNotification(false)} show={showNotification} />
         </ShopLayout>
     );
 }

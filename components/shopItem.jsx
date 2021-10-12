@@ -4,8 +4,10 @@ import { FaShoppingCart } from 'react-icons/fa'
 import { useCart } from '../utils/useCart'
 
 
-function ShopItem({ data }) {
+function ShopItem({ data, onAddToCart }) {
+
     const { addToCart } = useCart();
+
     return (
         <Col className="p-3 text-center d-flex flex-column align-items-center justify-content-start">
             <div className="cover-background">
@@ -21,7 +23,7 @@ function ShopItem({ data }) {
             </p>
             <ButtonGroup className="mt-auto">
                 <OutlineButton href={`/sklep/${data.link}`} >Dowiedz się więcej!</OutlineButton>
-                <Button variant="outline-dark" style={{ minWidth: 0 }} onClick={() => addToCart(data.id)} aria-label='add to cart'><FaShoppingCart /></Button>
+                <Button variant="outline-dark" style={{ minWidth: 0 }} onClick={() => { addToCart(data.id); onAddToCart() }} aria-label='add to cart'><FaShoppingCart /></Button>
             </ButtonGroup>
         </Col>
     );

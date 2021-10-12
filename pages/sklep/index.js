@@ -3,9 +3,13 @@ import { Container, Row, Col } from 'react-bootstrap'
 import OutlineButton from '../../components/outlineButton'
 import PageTitle from '../../components/pageTitle'
 import ShopItem from '../../components/shopItem'
+import { useState } from 'react'
+import AddToCartToast from '../../components/addToCartToast'
 import getProductsList from '../../utils/getProductsList'
 
 function Sklep({ productList }) {
+
+  const [showNotification, setShowNotification] = useState(false);
 
   return (
     <ShopLayout>
@@ -28,10 +32,11 @@ function Sklep({ productList }) {
         <section className='products'>
           <PageTitle id="products">Produkty</PageTitle>
           <Row xs={1} md={2} xl={3}>
-            {productList.map((product) => <ShopItem data={{ ...product }} key={product.id}></ShopItem>)}
+            {productList.map((product) => <ShopItem data={{ ...product }} key={product.id} onAddToCart={() => setShowNotification(true)}></ShopItem>)}
           </Row>
         </section>
       </Container>
+      <AddToCartToast onClose={() => setShowNotification(false)} show={showNotification} />
     </ShopLayout>
   )
 }
