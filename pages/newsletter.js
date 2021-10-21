@@ -17,6 +17,7 @@ function Placeholder() {
                 <div className="d-grid gap-2">
                     <OutlineButton type='submit' variant='secondary' size='lg'>Dołączam!</OutlineButton>
                 </div>
+                // TODO finish newsletter page
             </Container>
         </DefaultLayout>
     );
