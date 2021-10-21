@@ -7,6 +7,8 @@ import PageTitle from "../components/pageTitle";
 import * as yup from 'yup'
 import ContactForm from "../components/contactForm"
 
+
+// Validation schema for the form
 const schema = yup.object().shape({
     fullname: yup.string().min(3, "Proszę wpisać poprawne imię i nazwisko!").max(50, "Imię i nazwisko za długie. Proszę wpisać poprawne imię i nazwisko!").matches(/[A-Za-z]/, "Proszę wpisać imię i nazwisko!").required("Proszę wpisać imię i nazwisko!"),
     phone: yup.string().min(9, "Numer telefonu za krótki! Proszę wpisać poprawny numer telefonu!").max(9, "Numer telefonu za długi! Proszę wpisać poprawny numer telefonu!").matches(/[0-9]{9}/, "Proszę wpisać poprawny numer telefonu!").required("Proszę wpisać numer telefonu!"),
@@ -23,6 +25,7 @@ function Kontakt() {
     const router = useRouter();
     const formRef = useRef();
 
+    // Change paragraph content and automatically select form according to what was chosen on oferta page
     useEffect(() => {
         const { temat } = router.query;
         switch (temat) {
@@ -61,19 +64,21 @@ function Kontakt() {
                             className="img-fluid"
                             width={90}
                         />
-                        <p className={topic ? "d-none" : undefined}>
-                            Hej! Cieszę się, że tu trafiłaś! Zanim wyślesz mi wiadomość,
-                            przeczytaj proszę zakładkę&nbsp;
-                            <Link href="/oferta">oferta. </Link>
-                            Znajdziesz tam wszelkie informację na temat&nbsp;tego,
-                            co&nbsp;mogę dla Ciebie zrobić i&nbsp;w&nbsp;jaki sposób mogę
-                            Ci&nbsp;pomóc&nbsp;:)
-                        </p>
-                        <p className={topic ? undefined : "d-none"}>
-                            Hej! Cieszę się, że tu trafiłaś! W tym miejscu możesz napisać
-                            do mnie wiadomość w sprawie współpracy na którą się zdecydowałaś,
-                            a ja skontaktuję się z tobą najszybciej jak będę mogła!
-                        </p>
+                        {!topic ?
+                            <p>
+                                Hej! Cieszę się, że tu trafiłaś! Zanim wyślesz mi wiadomość,
+                                przeczytaj proszę zakładkę&nbsp;
+                                <Link href="/oferta">oferta. </Link>
+                                Znajdziesz tam wszelkie informację na temat&nbsp;tego,
+                                co&nbsp;mogę dla Ciebie zrobić i&nbsp;w&nbsp;jaki sposób mogę
+                                Ci&nbsp;pomóc&nbsp;:)
+                            </p> :
+                            <p>
+                                Hej! Cieszę się, że tu trafiłaś! W tym miejscu możesz napisać
+                                do mnie wiadomość w sprawie współpracy na którą się zdecydowałaś,
+                                a ja skontaktuję się z tobą najszybciej jak będę mogła!
+                            </p>
+                        }
                     </Col>
                     <Col>
                         <ContactForm
@@ -115,11 +120,12 @@ function Kontakt() {
             case "4":
                 data.topic = "Inne";
                 break;
-
             default:
+                data.topic = "Wybrano błędny temat";
                 break;
         }
-        const settings = {
+
+        const requestData = {
             method: 'POST',
             headers: {
                 'contentType': 'application/json'
@@ -127,7 +133,8 @@ function Kontakt() {
             mode: 'no-cors',
             body: JSON.stringify(data)
         }
-        const response = await fetch("https://api.julka.fit/contact", settings);
+
+        const response = await fetch("https://api.julka.fit/contact", requestData);
 
         if (response) {
             setInfo(true);
@@ -135,8 +142,6 @@ function Kontakt() {
         } else {
             setWarning(true);
         }
-
-        return;
     }
 }
 
