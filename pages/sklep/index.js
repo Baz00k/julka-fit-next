@@ -3,14 +3,9 @@ import { Container, Row, Col } from 'react-bootstrap'
 import OutlineButton from '../../components/outlineButton'
 import PageTitle from '../../components/pageTitle'
 import ShopItem from '../../components/shopItem'
-import { useState } from 'react'
-import AddToCartToast from '../../components/addToCartToast'
-import getProductsList from '../../utils/getProductsList'
 
-function Sklep({ productList }) {
 
-  const [showNotification, setShowNotification] = useState(false);
-
+function Sklep() {
   return (
     <ShopLayout>
       <Container>
@@ -32,22 +27,14 @@ function Sklep({ productList }) {
         <section className='products'>
           <PageTitle id="products">Produkty</PageTitle>
           <Row xs={1} md={2} xl={3}>
-            {productList.map((product) => <ShopItem data={{ ...product }} key={product.id} onAddToCart={() => setShowNotification(true)}></ShopItem>)}
+            <ShopItem image={"https://cdn.sklep.julka.fit/owsianki/cover-image.jpg"} name={'E-book "Owsianki na wszystkie poranki"'} price={"79.00"} link={"owsianki"} key={"owsianki"}></ShopItem>
+            <ShopItem image={"https://cdn.sklep.julka.fit/jesienno-zimowy/cover-image.jpg"} name={'E-book jesienno-zimowy'} price={"79.00"} link={"jesienno-zimowy"} key={"jesienno-zimowy"}></ShopItem>
+            <ShopItem image={"https://cdn.sklep.julka.fit/zestaw/cover-image.jpg"} name={'Zestaw E-booków'} price={"139.00"} link={"zestaw"} key={"zestaw"}></ShopItem>
           </Row>
         </section>
       </Container>
-      <AddToCartToast onClose={() => setShowNotification(false)} show={showNotification} />
     </ShopLayout>
   )
-}
-
-export async function getStaticProps(context) {
-
-  const productList = await getProductsList();
-
-  return {
-    props: { productList: productList.data },
-  }
 }
 
 export default Sklep;

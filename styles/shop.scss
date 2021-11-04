@@ -167,3 +167,73 @@
     max-width: 80px;
     max-height: 150px;
 }
+
+.carousel-title {
+    font-size: 1.5rem;
+    font-family: "Abril Fatface", cursive;
+    margin: 1rem;
+}
+
+.carousel-title-small {
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+.carousel-wrapper {
+    margin-left: 55px;
+    margin-right: 55px;
+}
+
+.carousel-indicators button {
+    border: none;
+    margin: 5px;
+    min-width: 25px;
+}
+
+.carousel-indicators {
+    bottom: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 0;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 2px solid black;
+    color: #333;
+    background-color: transparent;
+}
+
+.carousel-control-next {
+    right: -60px;
+}
+
+.carousel-control-prev {
+    left: -60px;
+}
+
+@media (max-width: 768px) {
+    .carousel-control-next,
+    .carousel-control-prev {
+        display: none;
+    }
+    .carousel-wrapper {
+        margin: 0;
+    }
+}
+
+ul {
+    font-size: 1.1rem;
+}
+
+.button-wrapper {
+    max-width: 20em;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
