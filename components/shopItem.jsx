@@ -1,30 +1,21 @@
-import { Col, ButtonGroup, Button } from "react-bootstrap"
+import { Col } from "react-bootstrap"
 import OutlineButton from "../components/outlineButton"
-import { FaShoppingCart } from 'react-icons/fa'
-import { useCart } from '../utils/useCart'
 
 
-function ShopItem({ data, onAddToCart }) {
-
-    const { addToCart } = useCart();
-
+function ShopItem({ image, name, price, link }) {
     return (
         <Col className="p-3 text-center d-flex flex-column align-items-center justify-content-start">
             <div className="cover-background">
-                <div className="cover-device" style={{ backgroundImage: `url(${data.images[0]})` }}>
-                </div>
+                <div className="cover-device" style={{ backgroundImage: `url(${image})` }}></div>
             </div>
-            <h2 className="h3 mt-4 font-abril">{data.name}</h2>
+            <h2 className="h3 mt-4 font-abril">{name}</h2>
             <p className="product-price fs-2 mb-4">
                 Cena:{" "}
                 <span style={{ color: "#b6366c" }}>
-                    {(data.unit_amount / 100).toFixed(2)} zł
+                    {price} zł
                 </span>
             </p>
-            <ButtonGroup className="mt-auto">
-                <OutlineButton href={`/sklep/${data.link}`} >Dowiedz się więcej!</OutlineButton>
-                <Button variant="outline-dark" style={{ minWidth: 0 }} onClick={() => { addToCart(data.id); onAddToCart() }} aria-label='add to cart'><FaShoppingCart /></Button>
-            </ButtonGroup>
+            <OutlineButton href={`/sklep/${link}`} className="mt-auto">Dowiedz się więcej!</OutlineButton>
         </Col>
     );
 }
