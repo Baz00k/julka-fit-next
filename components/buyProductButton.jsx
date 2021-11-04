@@ -1,10 +1,10 @@
 import OutlineButton from '../components/outlineButton'
 
 
-function BuyProductButton({ id }) {
+function BuyProductButton({ onClick }) {
 
     return (
-        <OutlineButton onClick={() => console.log(id)} className='button-buy my-5'>Kupuję!</OutlineButton>
+        <OutlineButton onClick={onClick} className='button-buy my-5'>Kupuję!</OutlineButton>
     );
 }
 

@@ -1,14 +1,19 @@
 import ShopLayout from "../../layouts/shopLayout"
 import { Container, Row, Col, Carousel } from "react-bootstrap"
 import BuyProductButton from "../../components/buyProductButton"
+import { useState } from "react"
+import PaymentModal from "../../components/paymentModal"
 
-const stripeID = "0";
+const stripeID = "price_1Js9LrE3xVb6glJspuo4A5xl";
 const cdnURL = 'owsianki';
 const title = "Owsianki na wszystkie poranki";
 const price = "79.00 zł";
 const desc = "Chcesz przełamać rutynę i każdego dnia jeść nową, pyszną owsiankę? Ten e-book Ci w tym pomoże! Znajdziesz w nim aż 50 przepisów na najróżniejsze owsianki.";
 
 function Owsianki() {
+
+    const [modalShow, setModalShow] = useState(false);
+
     return (
         <ShopLayout>
             <Container>
@@ -25,7 +30,7 @@ function Owsianki() {
                             <p className="product-description">
                                 {desc}
                             </p>
-                            <BuyProductButton id={stripeID} />
+                            <BuyProductButton onClick={() => setModalShow(true)}/>
                         </Col>
                         <Col className='col-xl-4 m-xl-4 p-2 gx-0 d-flex justify-content-center'>
                             <div className="cover-background">
@@ -191,10 +196,11 @@ function Owsianki() {
                     <div className="d-flex justify-content-center flex-column text-center mt-5">
                         <h2 className="carousel-title my-0">Okej Julka, przekonałaś mnie.</h2>
                         <div className="button-wrapper">
-                            <BuyProductButton id={stripeID} />
+                            <BuyProductButton onClick={() => setModalShow(true)}/>
                         </div>
                     </div>
                 </section>
+                <PaymentModal show={modalShow} setModalShow={setModalShow} productID={stripeID} />
             </Container>
         </ShopLayout>
     );

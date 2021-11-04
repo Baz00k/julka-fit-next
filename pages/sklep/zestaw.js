@@ -1,15 +1,20 @@
 import ShopLayout from "../../layouts/shopLayout"
 import { Container, Row, Col, Carousel } from "react-bootstrap"
 import BuyProductButton from "../../components/buyProductButton"
-import ShopItem from "../../components/shopItem";
+import ShopItem from "../../components/shopItem"
+import { useState } from "react"
+import PaymentModal from "../../components/paymentModal"
 
-const stripeID = "2";
+const stripeID = "price_1Js9MxE3xVb6glJsz0WE12nV";
 const cdnURL = 'zestaw';
 const title = "Zestaw e-booków";
 const price = "139.00 zł";
 const desc = "Zestaw e-booków „Owsianki na wszystkie poranki” i „E-book jesienno-zimowy” to więcej radości i gotowania w niższej cenie! Aż 100 starannie dopracowanych, wegetariańskich przepisów, które podbiją Twoje serducho i podniebienie.";
 
 function Zestaw() {
+    
+    const [modalShow, setModalShow] = useState(false);
+
     return (
         <ShopLayout>
             <Container>
@@ -26,7 +31,7 @@ function Zestaw() {
                             <p className="product-description">
                                 {desc}
                             </p>
-                            <BuyProductButton id={stripeID} />
+                            <BuyProductButton onClick={() => setModalShow(true)}/>
                         </Col>
                         <Col className='col-xl-4 m-xl-4 p-2 gx-0 d-flex justify-content-center'>
                             <div className="cover-background">
@@ -95,6 +100,7 @@ function Zestaw() {
                         <ShopItem image={"https://cdn.sklep.julka.fit/jesienno-zimowy/cover-image.jpg"} name={'E-book jesienno-zimowy'} price={"79.00"} link={"jesienno-zimowy"} key={"jesienno-zimowy"}></ShopItem>
                     </Row>
                 </section>
+                <PaymentModal show={modalShow} setModalShow={setModalShow} productID={stripeID} />
             </Container>
         </ShopLayout>
     );
