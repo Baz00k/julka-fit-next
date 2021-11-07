@@ -94,7 +94,7 @@ function Zestaw() {
                     </Row>
                 </section>
                 <section className="my-5">
-                    <h2 className="carousel-title text-center mt-3">Informacje o obydwu o-bookach możesz znaleźć tutaj:</h2>
+                    <h2 className="carousel-title text-center mt-3">Informacje o obydwu e-bookach możesz znaleźć tutaj:</h2>
                     <Row xs={1} md={2} xl={3} className="justify-content-center mt-5">
                         <ShopItem image={"https://cdn.sklep.julka.fit/owsianki/cover-image.jpg"} name={'E-book "Owsianki na wszystkie poranki"'} price={"79.00"} link={"owsianki"} key={"owsianki"}></ShopItem>
                         <ShopItem image={"https://cdn.sklep.julka.fit/jesienno-zimowy/cover-image.jpg"} name={'E-book jesienno-zimowy'} price={"79.00"} link={"jesienno-zimowy"} key={"jesienno-zimowy"}></ShopItem>
