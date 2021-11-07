@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://julka.fit</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-02T23:42:15.803Z</lastmod></url>
-<url><loc>https://julka.fit/500</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-02T23:42:15.803Z</lastmod></url>
-<url><loc>https://julka.fit/blog</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-02T23:42:15.803Z</lastmod></url>
-<url><loc>https://julka.fit/dzieki</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-02T23:42:15.804Z</lastmod></url>
-<url><loc>https://julka.fit/kontakt</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-02T23:42:15.804Z</lastmod></url>
-<url><loc>https://julka.fit/newsletter</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-02T23:42:15.804Z</lastmod></url>
-<url><loc>https://julka.fit/o-mnie</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-02T23:42:15.804Z</lastmod></url>
-<url><loc>https://julka.fit/oferta</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-02T23:42:15.804Z</lastmod></url>
-<url><loc>https://julka.fit/polityka-prywatnosci</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-02T23:42:15.804Z</lastmod></url>
-<url><loc>https://julka.fit/regulamin</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-02T23:42:15.804Z</lastmod></url>
-<url><loc>https://julka.fit/sklep</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-02T23:42:15.804Z</lastmod></url>
-<url><loc>https://julka.fit/sklep/jesienno-zimowy</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-02T23:42:15.804Z</lastmod></url>
-<url><loc>https://julka.fit/sklep/owsianki</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-02T23:42:15.804Z</lastmod></url>
-<url><loc>https://julka.fit/sklep/zestaw</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-02T23:42:15.804Z</lastmod></url>
+<url><loc>julkafit.netlify.app</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-07T01:28:03.163Z</lastmod></url>
+<url><loc>julkafit.netlify.app/blog</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-07T01:28:03.163Z</lastmod></url>
+<url><loc>julkafit.netlify.app/kontakt</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-07T01:28:03.163Z</lastmod></url>
+<url><loc>julkafit.netlify.app/newsletter</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-07T01:28:03.163Z</lastmod></url>
+<url><loc>julkafit.netlify.app/o-mnie</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-07T01:28:03.163Z</lastmod></url>
+<url><loc>julkafit.netlify.app/oferta</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-07T01:28:03.163Z</lastmod></url>
+<url><loc>julkafit.netlify.app/polityka-prywatnosci</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-07T01:28:03.163Z</lastmod></url>
+<url><loc>julkafit.netlify.app/regulamin</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-07T01:28:03.163Z</lastmod></url>
+<url><loc>julkafit.netlify.app/sklep</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-07T01:28:03.163Z</lastmod></url>
+<url><loc>julkafit.netlify.app/sklep/jesienno-zimowy</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-07T01:28:03.163Z</lastmod></url>
+<url><loc>julkafit.netlify.app/sklep/owsianki</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-07T01:28:03.163Z</lastmod></url>
+<url><loc>julkafit.netlify.app/sklep/zestaw</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-11-07T01:28:03.163Z</lastmod></url>
 </urlset>
