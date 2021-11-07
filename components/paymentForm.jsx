@@ -11,6 +11,7 @@ function PaymentForm({ productID }) {
 
     async function submit(e) {
         setLoading(true);
+        setError({ message: false });
         e.preventDefault();
 
         //get data from form
@@ -22,7 +23,7 @@ function PaymentForm({ productID }) {
         }
 
         //send data to server
-        const response = await fetch('https://jdkkz9sbhd.execute-api.eu-central-1.amazonaws.com/default', {
+        const response = await fetch(process.env.NEXT_PUBLIC_PAYMENT_DOMAIN, {
             method: 'POST',
             mode: 'cors',
             cache: 'no-cache',
@@ -39,7 +40,7 @@ function PaymentForm({ productID }) {
         });
 
         //check if response was successful
-        if (response.ok) {
+        if (response && response.ok) {
 
             const json = await response.json();
 
@@ -53,15 +54,19 @@ function PaymentForm({ productID }) {
 
             } else {
 
+                //redirect to payment page
                 try {
+                    //get stripe instance
                     const stripe = await getStripe();
                     const { error } = await stripe.redirectToCheckout({
                         sessionId: json.session.id,
                     });
+                    //show error if redirect failed
                     if (error) {
                         setError({ message: error.message });
                     }
                 } catch (error) {
+                    //catch redirect error
                     console.log(error);
                     setError({ message: "Wystąpił błąd płatności, odśwież stronę i spróbuj ponownie" });
                 }
@@ -69,9 +74,11 @@ function PaymentForm({ productID }) {
             }
 
         } else {
+            //catch server error
             setError({ message: "Wystąpił błąd połączenia z serwerem, odśwież stronę i spróbuj ponownie" });
         }
 
+        //finish loading
         setLoading(false);
     }
 
@@ -113,7 +120,7 @@ function PaymentForm({ productID }) {
                     {
                         loading ?
                             <div className="m-1 fs-6">
-                                <Spinner animation="border" role="status" className="text-reset">
+                                <Spinner animation="border" role="status">
                                     <span className="visually-hidden">Wysyłanie...</span>
                                 </Spinner>
                             </div>
