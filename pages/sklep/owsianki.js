@@ -48,7 +48,7 @@ function Owsianki() {
                             <div className="carousel-wrapper">
                                 <Carousel variant="dark">
                                     {
-                                        getCarouselItems(4)
+                                        getCarouselItems(7)
                                     }
                                 </Carousel>
                             </div>

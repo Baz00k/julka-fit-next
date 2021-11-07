@@ -49,7 +49,7 @@ function Zestaw() {
                             <div className="carousel-wrapper">
                                 <Carousel variant="dark">
                                     {
-                                        getCarouselItems(4)
+                                        getCarouselItems(8)
                                     }
                                 </Carousel>
                             </div>
