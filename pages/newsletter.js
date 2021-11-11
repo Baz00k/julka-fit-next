@@ -35,7 +35,7 @@ function Newsletter() {
                     <Col xs={12} md={4} lg={4} xl={3} className="p-5 p-md-3">
                         <img
                             className="img-fluid"
-                            src="../o-mnie.jpg"
+                            src="https://cdn.julka.fit/o-mnie.jpg"
                             alt="banner_desktop"
                         />
                     </Col>

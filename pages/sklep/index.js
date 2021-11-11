@@ -20,7 +20,7 @@ function Sklep() {
               <OutlineButton href="#products">Chcę zobaczyć produkty</OutlineButton>
             </Col>
             <Col>
-              <img src='/looking_left.png' className="shop-banner-image img-fluid" alt="Julia Migdalska" />
+              <img src='https://cdn.julka.fit/looking_left.png' className="shop-banner-image img-fluid" alt="Julia Migdalska" />
             </Col>
           </Row>
         </section>
