@@ -11,7 +11,7 @@ const price = "79.00 zł";
 const desc = "Otul się cudownym zapachem dyni, czekolady i cynamonu. Przygotuj niezwykle aromatyczny krem z dyni, rozgrzewające curry i przepyszną szarlotkę. W e-booku znajdziesz aż 50 starannie dopracowanych, wegetariańskich przepisów na jesienno-zimowe potrawy.";
 
 function JesiennoZimowy() {
-    
+
     const [modalShow, setModalShow] = useState(false);
 
     return (
@@ -94,103 +94,75 @@ function JesiennoZimowy() {
                     <h2 className="carousel-title">Spis treści:</h2>
                     <h2 className="carousel-title-small"><u>Wstęp</u></h2>
                     <ul>
-                        <li>Dlaczego akurat owsianki?</li>
-                        <li>Jak zamienić owsiankę w pełnowartościowy posiłek?</li>
-                        <li>Jak zamienić &quot;nijaką papkę&quot; w królewskie śniadanie?</li>
+                        <li>Spis sezonowych warzyw i owoców</li>
+                        <li>Garść sposobów na jesienną chandrę</li>
+                        <li>Jak modyfikować kaloryczność przepisów?</li>
                         <li>Lista zamienników</li>
+                        <li>Zanim zaczniesz gotować</li>
+                        <li>Jak zrobić puree z dyni Hokkaido?</li>
                     </ul>
                     <h2 className="carousel-title-small">
-                        <u
-                        >Owsianki zwykłe-niezwykłe, czyli jak zmienić owsiankę w
-                            królewskie śniadanie?</u
-                        >
+                        <u>
+                            Na słodko:
+                        </u>
                     </h2>
                     <ul>
-                        <li>Bananowa z karmelizowanym bananem</li>
-                        <li>Obłędnie kremowa, czekoladowa</li>
-                        <li>Mleczna z duszonym jabłkiem</li>
-                        <li>Złota</li>
-                        <li>Waniliowa z gorącymi wiśniami</li>
-                        <li>Tropikalna</li>
-                        <li>Z tahini i granatem</li>
-                        <li>Jogurtowa</li>
-                        <li>Z kardamonem i karmelizowaną gruszką</li>
-                        <li>Pb&jelly</li>
-                        <li>Z kaszą manną, gorącymi jagodami i białą czekoladą</li>
-                        <li>Prażona z duszonym jabłkiem</li>
-                        <li>Makowa</li>
-                        <li>Owoce leśne + tajny sos z białej czekolady</li>
+                        <li>Omlet dyniowy</li>
+                        <li>Wegański omlet z tofu</li>
+                        <li>Omlet szarlotkowy</li>
+                        <li>Wegańskie knedle z tofu</li>
+                        <li>Wegańskie dyniowe leniwe z tofu</li>
+                        <li>Placuszki dyniowe z czekoladą</li>
+                        <li>Wegańskie placuszki bananowe z tofu</li>
+                        <li>Naleśniki cynamonowe z karmelizowanymi śliwkami</li>
+                        <li>Wegańskie naleśniki czekoladowe</li>
+                        <li>Jesienna owsianka z gruszką marchewką i daktylami</li>
+                        <li>Dyniowa tofsianka z karmelizowaną gruszką</li>
+                        <li>Jesienna miska</li>
+                        <li>Imbirowa owsianka z duszonymi śliwkami</li>
+                        <li>Cynamonowy budyń jaglany z gorącymi wiśniami</li>
+                        <li>Czekoladowa gryczanka</li>
+                        <li>Gofry dyniowe</li>
+                        <li>Jabłka pieczone z granolą</li>
+                        <li>Labneh z gorącymi wiśniami i karmelizowanymi orzechami</li>
+                        <li>Śliwki pod owsianą kruszonką</li>
+                        <li>Mięciutkie, owsiane muffiny marchewkowe</li>
+                        <li>Najlepszy chlebek bananowy</li>
+                        <li>Brownie z batata z solonym karmelem</li>
                     </ul>
                     <h2 className="carousel-title-small">
-                        <u>Owsianki dla tajniaków... czyli jak w słodkim posiłku przemycić warzywo!</u>
+                        <u>Na słono:</u>
                     </h2>
                     <ul>
-                        <li>Dyniowa</li>
-                        <li>Z cukinią</li>
-                        <li>Z batatem, karmelizowanym bananem i malinami</li>
-                        <li>Z kalafiorem i gorącymi wiśniami</li>
-                        <li>Marchewkowa z karmelizowanymi orzechami</li>
-                        <li>Wytrawna z warzywami i tofu</li>
-                    </ul>
-                    <h2 className="carousel-title-small">
-                        <u>Budynie owsiane... czyli zakochaj się w kremowejstrukturze!</u>
-                    </h2>
-                    <ul>
-                        <li>Piernikowy z duszonymi śliwkami</li>
-                        <li>Makowy z pomarańczą</li>
-                        <li>Kokosowy z malinami</li>
-                        <li>Czekoladowo-malinowy z chili</li>
-                        <li>Malinowy</li>
-                        <li>Cytrynowy</li>
-                        <li>A&apos;la zielony mech z granatem</li>
-                        <li>Bananowo-czekoladowy</li>
-                        <li>Owsiano-gryczany z gorącymi owocam</li>
-                    </ul>
-                    <h2 className="carousel-title-small">
-                        <u>Owsianki z budyniem... czyli niesamowita kremowość i duża objętość w jednym!</u>
-                    </h2>
-                    <ul>
-                        <li>Solony karmel</li>
-                        <li>Kokosowa chmurka z mango</li>
-                        <li>Kremowa, waniliowa</li>
-                    </ul>
-                    <h2 className="carousel-title-small">
-                        <u>Pieczone owsianki... czyli jak zamienić owsiankę w miniciasto!</u>
-                    </h2>
-                    <ul>
-                        <li>Czekoladowa z wiśniami</li>
-                        <li>Kokosowa z borówkami i czekoladą</li>
-                        <li>A&apos;la brownie</li>
-                        <li>A&apos;la ciasto marchewkowe</li>
-                        <li>Sernikowa</li>
-                        <li>A&apos;la szarlotka</li>
-                        <li>A&apos;la chlebek bananowy</li>
-                    </ul>
-                    <h2 className="carousel-title-small">
-                        <u>Siemianki... czyli bogactwo Omega-3 na talerzu!</u>
-                    </h2>
-                    <ul>
-                        <li>Klasyk klasyków, czyli siemianka bananowa</li>
-                        <li>Mrożona jagodowa</li>
-                        <li>Wegańska w wersji basic</li>
-                    </ul>
-                    <h2 className="carousel-title-small">
-                        <u>Owsianki z tofu czyli... tofsianki!</u>
-                    </h2>
-                    <ul>
-                        <li>Czekoladowa</li>
-                        <li>Waniliowa</li>
-                    </ul>
-                    <h2 className="carousel-title-small">
-                        <u>Płatki owsiane w innej odsłonie...czyli omlet, smoothie i inne cudowności!</u>
-                    </h2>
-                    <ul>
-                        <li>Owoce leśne pod owsianą kruszonką</li>
-                        <li>Wegański omlet owsiany</li>
-                        <li>Owsiana granola z patelni</li>
-                        <li>Nocna owsianka proteinowa</li>
-                        <li>Lodowe smoothie owsiane z owoców leśnych</li>
-                        <li>Nocna owsianka solone masło orzechowe</li>
+                        <li>Tosty z podsmażonym pomidorem, awokado i burratą</li>
+                        <li>Tosty z domowym hummusem, smażonymi warzywami i serem feta</li>
+                        <li>Wytrawne gofry z rozmarynem</li>
+                        <li>Wytrawne gofry w wersji wegańskiej</li>
+                        <li>Labneh ziołowo czosnkowy</li>
+                        <li>Pesto bazyliowo-pietruszkowe</li>
+                        <li>Pasta (bez)rybna z tofu</li>
+                        <li>Pasztet z batata i czerwonej soczewicy</li>
+                        <li>Idealny hummus z suszonymi pomidorami</li>
+                        <li>Tabouleh z razowego kuskusu z fetą</li>
+                        <li>Sałatka z pieczoną dynią, awokado, fetą i sezamowym dressingiem</li>
+                        <li>Zupa krem z dyni Hokkaido</li>
+                        <li>Zupa krem z batata i soczewicy z mleczkiem kokosowym</li>
+                        <li>Gęsty krem z czerwonych warzyw, soczewicy i daktyli</li>
+                        <li>Krem z pieczonych pomidorów, papryki i... wiśni</li>
+                        <li>Spaghetti tofunese</li>
+                        <li>Makaron z pomidorami, soczewicą i serem feta</li>
+                        <li>Makaron z pieczonymi warzywami i serem feta</li>
+                        <li>Wegańska lasagne z tofu</li>
+                        <li>Makaron ryżowy z warzywami i sosem sezamowym</li>
+                        <li>Chili sin carne</li>
+                        <li>Rozgrzewające curry z batatem i soczewicą</li>
+                        <li>Rozgrzewające leczo</li>
+                        <li>Cukinia nadziewana kuskusem i suszonymi pomidorami</li>
+                        <li>Naleśniki meksykańskie</li>
+                        <li>Pieczona feta z cynamonowym miodem i różowymi winogronami</li>
+                        <li>Karmelizowana brukselka z orzechami Pekan</li>
+                        <li>Placuszki z cukinii i marchewki</li>
+                        <li>Przepis niespodzianka</li>
                     </ul>
 
                     <div className="d-flex justify-content-center flex-column text-center mt-5">
