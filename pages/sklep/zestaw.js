@@ -5,7 +5,7 @@ import ShopItem from "../../components/shopItem"
 import { useState } from "react"
 import PaymentModal from "../../components/paymentModal"
 
-const stripeID = "price_1Js9MxE3xVb6glJsz0WE12nV";
+const stripeID = "price_1JuP1OFlitTRS2IiHKACRyiC";
 const cdnURL = 'zestaw';
 const title = "Zestaw e-booków";
 const price = "139.00 zł";

@@ -4,7 +4,7 @@ import BuyProductButton from "../../components/buyProductButton"
 import { useState } from "react"
 import PaymentModal from "../../components/paymentModal"
 
-const stripeID = "price_1Js9CTE3xVb6glJsPTLLfXP8";
+const stripeID = "price_1JuOu9FlitTRS2IiexPIsSE5";
 const cdnURL = 'jesienno-zimowy';
 const title = "jesienno-zimowy";
 const price = "79.00 zł";

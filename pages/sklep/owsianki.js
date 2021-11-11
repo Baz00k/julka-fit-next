@@ -4,7 +4,7 @@ import BuyProductButton from "../../components/buyProductButton"
 import { useState } from "react"
 import PaymentModal from "../../components/paymentModal"
 
-const stripeID = "price_1Js9LrE3xVb6glJspuo4A5xl";
+const stripeID = "price_1JJZLPFlitTRS2IiqHTAZQJh";
 const cdnURL = 'owsianki';
 const title = "Owsianki na wszystkie poranki";
 const price = "79.00 zł";
