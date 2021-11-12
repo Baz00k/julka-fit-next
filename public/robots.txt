@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: julkafit.netlify.app
+Host: julka.fit
 
 # Sitemaps
-Sitemap: julkafit.netlify.app/sitemap.xml
+Sitemap: julka.fit/sitemap.xml
