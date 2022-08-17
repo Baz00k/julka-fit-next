@@ -51,7 +51,7 @@ function ContactForm({topic, ...props}) {
                                 value={values.topic}
                                 name="topic"
                                 isValid={touched.topic && !errors.topic}
-                                disabled={topic ? true : false}
+                                disabled={!!topic}
                             >
                                 <option disabled value={0}>Wybierz temat wiadomości</option>
                                 <option value={1}>Indywidualny jadłospis – 7 dni</option>
