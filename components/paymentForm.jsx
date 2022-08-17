@@ -34,15 +34,17 @@ function PaymentForm({ productID }) {
             redirect: 'follow',
             referrerPolicy: 'no-referrer',
             body: JSON.stringify(data || {})
-        }).catch(err => {
+        }).then(
+            response => response.json()
+        ).catch(err => {
             console.log(err);
-            return { ok: false };
+            return false;
         });
 
         //check if response was successful
-        if (response && response.ok) {
+        if (response && response.statusCode === 200) {
 
-            const json = await response.json();
+            const json = JSON.parse(response.body);
 
             //check if coupon was valid
             if (json.error) {
@@ -105,7 +107,7 @@ function PaymentForm({ productID }) {
                 <Form.Check type="checkbox" required inline />
                 <Form.Label className="d-inline">
                     {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-                    Potwierdzam zapoznanie się z <a href="/regulamin" target="_blank">regulaminem</a> oraz <a href="/polityka-prywatnosci" target="_blank">polityką&nbsp;prywatności</a>.
+                    Potwierdzam zapoznanie się z <a href="/regulamin.html" target="_blank">regulaminem</a> oraz <a href="/polityka-prywatnosci.html" target="_blank">polityką&nbsp;prywatności</a>.
                 </Form.Label>
             </Form.Group>
             <Form.Group controlId='consent-link' className="mb-3">
