@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://julka.fit</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
-<url><loc>https://julka.fit/500</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
-<url><loc>https://julka.fit/blog</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
-<url><loc>https://julka.fit/dzieki</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
-<url><loc>https://julka.fit/kontakt</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
-<url><loc>https://julka.fit/newsletter</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
-<url><loc>https://julka.fit/o-mnie</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
-<url><loc>https://julka.fit/oferta</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
-<url><loc>https://julka.fit/polityka-prywatnosci</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
-<url><loc>https://julka.fit/regulamin</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
-<url><loc>https://julka.fit/sklep</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
-<url><loc>https://julka.fit/sklep/koszyk</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
-<url><loc>https://julka.fit/sklep/obiadki</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
-<url><loc>https://julka.fit/sklep/wieczorki</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
-<url><loc>https://julka.fit/sklep/owsianki</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2021-10-10T21:17:22.345Z</lastmod></url>
+<url><loc>julka.fit</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-08-17T11:49:07.312Z</lastmod></url>
+<url><loc>julka.fit/blog</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-08-17T11:49:07.313Z</lastmod></url>
+<url><loc>julka.fit/kontakt</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-08-17T11:49:07.313Z</lastmod></url>
+<url><loc>julka.fit/newsletter</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-08-17T11:49:07.313Z</lastmod></url>
+<url><loc>julka.fit/o-mnie</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-08-17T11:49:07.313Z</lastmod></url>
+<url><loc>julka.fit/oferta</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-08-17T11:49:07.313Z</lastmod></url>
+<url><loc>julka.fit/polityka-prywatnosci</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-08-17T11:49:07.313Z</lastmod></url>
+<url><loc>julka.fit/regulamin</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-08-17T11:49:07.313Z</lastmod></url>
+<url><loc>julka.fit/sklep</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-08-17T11:49:07.313Z</lastmod></url>
+<url><loc>julka.fit/sklep/jesienno-zimowy</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-08-17T11:49:07.313Z</lastmod></url>
+<url><loc>julka.fit/sklep/owsianki</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-08-17T11:49:07.313Z</lastmod></url>
+<url><loc>julka.fit/sklep/zestaw</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-08-17T11:49:07.313Z</lastmod></url>
 </urlset>

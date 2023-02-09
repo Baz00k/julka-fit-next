@@ -1,8 +1,7 @@
 import DefaultLayout from "../layouts/defaultLayout"
-import SectionWithTitle from '../components/sectionWithTitle'
 import NewsletterBanner from '../components/newsletterBanner'
 import Link from 'next/link';
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap"
 
 function Omnie() {
     return (
@@ -16,7 +15,7 @@ function Omnie() {
                     <Col xs={12} md={6} lg={4} xl={3} className="p-5 p-md-3 pt-md-5">
                         <img
                             className="img-fluid"
-                            src="../o-mnie.jpg"
+                            src="https://cdn.julka.fit/o-mnie.jpg"
                             alt="banner_desktop"
                         />
                     </Col>

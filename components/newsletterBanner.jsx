@@ -22,7 +22,7 @@ function NewsletterBanner() {
                         <OutlineButton onClick={() => setModalShow(true)}>Zapisuję się!</OutlineButton>
                     </Col>
                     <Col className='d-none d-md-flex' md={3}>
-                        <img src="/looking_left.png" alt="Julia Migdalska" className='newsletter-image' />
+                        <img src="https://cdn.julka.fit/looking_left.png" alt="Julia Migdalska" className='newsletter-image' />
                     </Col>
                 </Row>
             </Container>

@@ -6,7 +6,6 @@ class MyDocument extends Document {
         return (
             <Html lang='pl'>
                 <Head>
-                    <meta charSet="UTF-8" />
                     <meta
                         name="description"
                         content="Cześć! Jestem Julka. Nauczę Cię jeść zdrowo - z głową. Ułożę dla Ciebie jadłospis i pomogę Ci w zmianie nawyków żywieniowych."

@@ -107,17 +107,18 @@ function Kontakt() {
         setWarning(false);
 
         let data = { ...values };
-        switch (values.topic) {
-            case "1":
+
+        switch (parseInt(values.topic)) {
+            case 1:
                 data.topic = "Indywidualny jadłospis – 7 dni";
                 break;
-            case "2":
+            case 2:
                 data.topic = "Indywidualny jadłospis – 14 dni";
                 break;
-            case "3":
+            case 3:
                 data.topic = "Współpraca indywidualna miesięczna";
                 break;
-            case "4":
+            case 4:
                 data.topic = "Inne";
                 break;
             default:

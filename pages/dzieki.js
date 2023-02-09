@@ -4,7 +4,7 @@ function Placeholder() {
     return (
         <DefaultLayout>
             <h1>Strona podziękowań</h1>
-            // TODO finish thank you page
+            {/* {TODO finish thank you page} */}
         </DefaultLayout>
     );
 }

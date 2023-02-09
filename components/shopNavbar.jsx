@@ -2,10 +2,8 @@ import { Navbar, Container, Nav } from 'react-bootstrap'
 import BrandImage from './brandImage'
 import NavLink from './navlink'
 import SocialLink from './socialLink'
-import CartWidget from './cartWidget'
 
 function ShopNavbar({ sticky }) {
-
     return (
         <Navbar expand="md" variant="light" bg="white" sticky={sticky}>
             <Container>
@@ -18,7 +16,6 @@ function ShopNavbar({ sticky }) {
                         <NavLink href={'/sklep'} name="Sklep" path='/sklep' />
                         <NavLink href={'/oferta'} name="Oferta" />
                         <NavLink href={'/kontakt'} name="Kontakt" />
-                        <CartWidget />
                         <SocialLink href='https://www.instagram.com/julka_migdalska/' iconURL='https://cdn.julka.fit/instagram.svg' altTxt='Instagram' />
                     </Nav>
                 </Navbar.Collapse>
