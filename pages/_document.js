@@ -35,6 +35,7 @@ class MyDocument extends Document {
                 <body>
                     <Main />
                     <NextScript />
+                    <script src="/scripts/ml.js" defer async />
                 </body>
             </Html>
         )

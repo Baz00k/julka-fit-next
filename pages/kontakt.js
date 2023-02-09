@@ -110,10 +110,10 @@ function Kontakt() {
 
         switch (parseInt(values.topic)) {
             case 1:
-                data.topic = "Indywidualny jadłospis – 7 dni";
+                data.topic = "Indywidualny jadłospis - 7 dni";
                 break;
             case 2:
-                data.topic = "Indywidualny jadłospis – 14 dni";
+                data.topic = "Indywidualny jadłospis - 14 dni";
                 break;
             case 3:
                 data.topic = "Współpraca indywidualna miesięczna";

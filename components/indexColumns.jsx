@@ -14,13 +14,12 @@ function IndexColumns() {
                     </CustomCard>
 
                     <CustomCard title='Sklep' href='/sklep' buttonText='Przejdź do sklepu!'>
-                        Chodź! Zakochaj się w&nbsp;swojej&nbsp;diecie!
-                        Jedz&nbsp;pysznie i&nbsp;zdrowo, bez&nbsp;zbędnych restrykcji i&nbsp;wyrzutów sumienia.
-                        Znajdziesz&nbsp;tu e-booka z&nbsp;owsiankami, a&nbsp;niebawem więcej fajnych&nbsp;produktów.
+                        Chodź! Zakochaj się w swojej diecie! Jedz pysznie i zdrowo, bez zbędnych restrykcji i wyrzutów sumienia. Znajdziesz tu 3 e-booki pełne pysznych, wegetariańskich przepisów.
                     </CustomCard>
-                    
-                    <CustomCard title='Blog' href='/blog' buttonText='Wpadnij na bloga!'>
-                        Prace nad blogiem już trwają. Zapraszam niebawem!
+
+                    <CustomCard title='Podcast' href='/https://open.spotify.com/show/4uw5IfXDnNDn4myls2XR7L?si=5182a309349e4134' buttonText='Posłuchaj podcastu!'>
+                        Wiesz, że nagrywam podcast?
+                        Znajdziesz tu rozmowy o zdrowiu psychicznym, nocne przemyślenia i grube rozkminy. Czasem będzie na poważnie, a czasem na luzie.
                     </CustomCard>
 
                 </Row>

@@ -6,7 +6,9 @@ import OutlineButton from './outlineButton'
 
 function NewsletterBanner() {
 
-    const [modalShow, setModalShow] = useState(false);
+    const openNewsletterPopup = () => {
+        ml('show', 'tli5iW', true);
+    }
 
     return (
         <section className='newsletter-banner'>
@@ -19,16 +21,13 @@ function NewsletterBanner() {
                             odbierz darmowy jadłospis wegetariański na 3 dni i dowiedz się,
                             jak być &quot;FIT&quot;, jeść pizzę i mieć przy tym wolną głowę!
                         </p>
-                        <OutlineButton onClick={() => setModalShow(true)}>Zapisuję się!</OutlineButton>
+                        <OutlineButton className="ml-onclick-form" onClick={openNewsletterPopup}>Zapisuję się!</OutlineButton>
                     </Col>
                     <Col className='d-none d-md-flex' md={3}>
                         <img src="https://cdn.julka.fit/looking_left.png" alt="Julia Migdalska" className='newsletter-image' />
                     </Col>
                 </Row>
             </Container>
-            <CenteredModal show={modalShow} onHide={() => setModalShow(false)}>
-                <NewsletterForm/>
-            </CenteredModal>
         </section>
     );
 }
