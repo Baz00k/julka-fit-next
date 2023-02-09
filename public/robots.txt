@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: julka.fit
+Host: https://julka.fit
 
 # Sitemaps
-Sitemap: julka.fit/sitemap.xml
+Sitemap: https://julka.fit/sitemap.xml
