@@ -17,7 +17,7 @@ function IndexColumns() {
                         Chodź! Zakochaj się w swojej diecie! Jedz pysznie i zdrowo, bez zbędnych restrykcji i wyrzutów sumienia. Znajdziesz tu 3 e-booki pełne pysznych, wegetariańskich przepisów.
                     </CustomCard>
 
-                    <CustomCard title='Podcast' href='/https://open.spotify.com/show/4uw5IfXDnNDn4myls2XR7L?si=5182a309349e4134' buttonText='Posłuchaj podcastu!'>
+                    <CustomCard title='Podcast' href='https://open.spotify.com/show/4uw5IfXDnNDn4myls2XR7L?si=5182a309349e4134' buttonText='Posłuchaj podcastu!' target="_blank">
                         Wiesz, że nagrywam podcast?
                         Znajdziesz tu rozmowy o zdrowiu psychicznym, nocne przemyślenia i grube rozkminy. Czasem będzie na poważnie, a czasem na luzie.
                     </CustomCard>

@@ -16,7 +16,6 @@ function MainNavbar({ sticky }) {
                 <Navbar.Collapse id="navbar">
                     <Nav className='ms-auto h5 text-center float-md-right'>
                         <NavLink href={'/o-mnie'} name="O Mnie" path={path} />
-                        <NavLink href={'/blog'} name="Blog" path={path} />
                         <NavLink href={'/sklep'} name="Sklep" path={path} />
                         <NavLink href={'/oferta'} name="Oferta" path={path} />
                         <NavLink href={'/kontakt'} name="Kontakt" path={path} />

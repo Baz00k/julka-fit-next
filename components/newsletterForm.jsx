@@ -33,12 +33,8 @@ function NewsletterForm() {
                         className="img-fluid m-1 ms-3"
                         src="https://cdn.julka.fit/arrows_right.svg"
                         alt="arrows_right"
+                        style={{ height: '25px' }}
                     />
-                    <style jsx>{`
-                        img {
-                            height: 25px;
-                        }
-                    `}</style>
                 </OutlineButton>
             </Form.Group>
         </Form>
