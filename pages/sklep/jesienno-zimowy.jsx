@@ -20,7 +20,7 @@ function JesiennoZimowy() {
                 <section className='my-5'>
                     <Row className='justify-content-center' md={1} lg={2}>
                         <Col className='col-xl-4 m-xl-4 p-2 gx-0'>
-                            <h2 className='product-title'>E-book<br />{title}</h2>
+                            <h1 className='product-title'>E-book<br />{title}</h1>
                             <p className="product-price fs-2 mb-4">
                                 Cena:{" "}
                                 <span style={{ color: "#b6366c" }}>

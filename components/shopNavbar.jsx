@@ -12,7 +12,6 @@ function ShopNavbar({ sticky }) {
                 <Navbar.Collapse id="navbar">
                     <Nav className='ms-auto h5 text-center float-md-right'>
                         <NavLink href={'/o-mnie'} name="O Mnie" />
-                        <NavLink href={'/blog'} name="Blog" />
                         <NavLink href={'/sklep'} name="Sklep" path='/sklep' />
                         <NavLink href={'/oferta'} name="Oferta" />
                         <NavLink href={'/kontakt'} name="Kontakt" />

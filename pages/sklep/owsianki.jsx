@@ -20,7 +20,7 @@ function Owsianki() {
                 <section className='my-5'>
                     <Row className='justify-content-center' md={1} lg={2}>
                         <Col className='col-xl-4 m-xl-4 p-2 gx-0'>
-                            <h2 className='product-title'>E-book<br />{title}</h2>
+                            <h1 className='product-title'>E-book<br />{title}</h1>
                             <p className="product-price fs-2 mb-4">
                                 Cena:{" "}
                                 <span style={{ color: "#b6366c" }}>
@@ -30,7 +30,7 @@ function Owsianki() {
                             <p className="product-description">
                                 {desc}
                             </p>
-                            <BuyProductButton onClick={() => setModalShow(true)}/>
+                            <BuyProductButton onClick={() => setModalShow(true)} />
                         </Col>
                         <Col className='col-xl-4 m-xl-4 p-2 gx-0 d-flex justify-content-center'>
                             <div className="cover-background">
@@ -196,7 +196,7 @@ function Owsianki() {
                     <div className="d-flex justify-content-center flex-column text-center mt-5">
                         <h2 className="carousel-title my-0">Okej Julka, przekonałaś mnie.</h2>
                         <div className="button-wrapper">
-                            <BuyProductButton onClick={() => setModalShow(true)}/>
+                            <BuyProductButton onClick={() => setModalShow(true)} />
                         </div>
                     </div>
                 </section>

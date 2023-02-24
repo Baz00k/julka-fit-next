@@ -5,14 +5,14 @@ import ShopItem from "../../components/shopItem"
 import { useState } from "react"
 import PaymentModal from "../../components/paymentModal"
 
-const stripeID = "price_1JuP1OFlitTRS2IiHKACRyiC";
+const stripeID = "price_1Meg2iFlitTRS2IiSV5CpcTG";
 const cdnURL = 'zestaw';
 const title = "Zestaw e-booków";
-const price = "139.00 zł";
-const desc = "Zestaw e-booków „Owsianki na wszystkie poranki” i „E-book jesienno-zimowy” to więcej radości i gotowania w niższej cenie! Aż 100 starannie dopracowanych, wegetariańskich przepisów, które podbiją Twoje serducho i podniebienie.";
+const price = "159.00 zł";
+const desc = "Zgarnij 3 e-booki w cenie 2! „Wege Student”, „Owsianki na wszystkie poranki” i „E-book jesienno-zimowy”, czyli jeszcze więcej radości i gotowania w niższej cenie. Aż 140 starannie dopracowanych, wegetariańskich przepisów, które podbiją Twoje serducho i podniebienie.";
 
 function Zestaw() {
-    
+
     const [modalShow, setModalShow] = useState(false);
 
     return (
@@ -21,7 +21,7 @@ function Zestaw() {
                 <section className='my-5'>
                     <Row className='justify-content-center' md={1} lg={2}>
                         <Col className='col-xl-4 m-xl-4 p-2 gx-0'>
-                            <h2 className='product-title'>{title}</h2>
+                            <h1 className='product-title'>{title}</h1>
                             <p className="product-price fs-2 mb-4">
                                 Cena:{" "}
                                 <span style={{ color: "#b6366c" }}>
@@ -31,11 +31,11 @@ function Zestaw() {
                             <p className="product-description">
                                 {desc}
                             </p>
-                            <BuyProductButton onClick={() => setModalShow(true)}/>
+                            <BuyProductButton onClick={() => setModalShow(true)} />
                         </Col>
                         <Col className='col-xl-4 m-xl-4 p-2 gx-0 d-flex justify-content-center'>
                             <div className="cover-background">
-                                <div className="cover-device" style={{ backgroundImage: `url(https://cdn.sklep.julka.fit/${cdnURL}/cover-image.jpg)` }}>
+                                <div className="cover-device" style={{ backgroundImage: `url(/img/${cdnURL}/cover-image.jpg)` }}>
                                 </div>
                             </div>
                         </Col>
@@ -89,15 +89,19 @@ function Zestaw() {
                                 <li>
                                     E-book jesienno-zimowy
                                 </li>
+                                <li>
+                                    E-book &quot;Wege Student&quot;
+                                </li>
                             </ul>
                         </Col>
                     </Row>
                 </section>
                 <section className="my-5">
-                    <h2 className="carousel-title text-center mt-3">Informacje o obydwu e-bookach możesz znaleźć tutaj:</h2>
+                    <h2 className="carousel-title text-center mt-3">Informacje o każdym z e-booków możesz znaleźć tutaj:</h2>
                     <Row xs={1} md={2} xl={3} className="justify-content-center mt-5">
-                        <ShopItem image={"https://cdn.sklep.julka.fit/owsianki/cover-image.jpg"} name={'E-book "Owsianki na wszystkie poranki"'} price={"79.00"} link={"owsianki"} key={"owsianki"}></ShopItem>
-                        <ShopItem image={"https://cdn.sklep.julka.fit/jesienno-zimowy/cover-image.jpg"} name={'E-book jesienno-zimowy'} price={"79.00"} link={"jesienno-zimowy"} key={"jesienno-zimowy"}></ShopItem>
+                        <ShopItem image={"/img/wege-student/cover-image.jpg"} name={'"Wege Student"'} price={"69.00"} link={"wege-student"} key={"wege-student"} />
+                        <ShopItem image={"/img/jesienno-zimowy/cover-image.jpg"} name={'E-book jesienno-zimowy'} price={"79.00"} link={"jesienno-zimowy"} key={"jesienno-zimowy"} />
+                        <ShopItem image={"/img/owsianki/cover-image.jpg"} name={'"Owsianki na wszystkie poranki"'} price={"79.00"} link={"owsianki"} key={"owsianki"} />
                     </Row>
                 </section>
                 <PaymentModal show={modalShow} setModalShow={setModalShow} productID={stripeID} />
@@ -112,7 +116,7 @@ function Zestaw() {
                 <Carousel.Item key={i}>
                     <img
                         className="d-block w-100"
-                        src={`https://cdn.sklep.julka.fit/${cdnURL}/${i}.jpg`}
+                        src={`/img/${cdnURL}/${i}.jpg`}
                         alt="Zdjęcie produktu"
                     />
                 </Carousel.Item>

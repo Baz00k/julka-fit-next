@@ -24,12 +24,15 @@ function Sklep() {
             </Col>
           </Row>
         </section>
+      </Container>
+      <Container fluid className='p-2'>
         <section className='products'>
           <PageTitle id="products">Produkty</PageTitle>
-          <Row xs={1} md={2} xl={3}>
-            <ShopItem image={"https://cdn.sklep.julka.fit/owsianki/cover-image.jpg"} name={'E-book "Owsianki na wszystkie poranki"'} price={"79.00"} link={"owsianki"} key={"owsianki"}></ShopItem>
-            <ShopItem image={"https://cdn.sklep.julka.fit/jesienno-zimowy/cover-image.jpg"} name={'E-book jesienno-zimowy'} price={"79.00"} link={"jesienno-zimowy"} key={"jesienno-zimowy"}></ShopItem>
-            <ShopItem image={"https://cdn.sklep.julka.fit/zestaw/cover-image.jpg"} name={'Zestaw E-booków'} price={"139.00"} link={"zestaw"} key={"zestaw"}></ShopItem>
+          <Row xs={1} md={2} xl={4}>
+            <ShopItem image={"/img/zestaw/cover-image.jpg"} name={'Zestaw e-booków'} price={"159.00"} link={"zestaw"} key={"zestaw"} />
+            <ShopItem image={"/img/wege-student/cover-image.jpg"} name={'"Wege Student"'} price={"69.00"} link={"wege-student"} key={"wege-student"} />
+            <ShopItem image={"/img/owsianki/cover-image.jpg"} name={'"Owsianki na wszystkie poranki"'} price={"79.00"} link={"owsianki"} key={"owsianki"} />
+            <ShopItem image={"/img/jesienno-zimowy/cover-image.jpg"} name={'E-book jesienno-zimowy'} price={"79.00"} link={"jesienno-zimowy"} key={"jesienno-zimowy"} />
           </Row>
         </section>
       </Container>

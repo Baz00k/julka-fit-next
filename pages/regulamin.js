@@ -315,7 +315,7 @@ function Regulamin() {
                             Szczeg&oacute;ły dotyczące przetwarzania danych osobowych oraz
                             wykorzystywania plik&oacute;w cookies znajdują się w polityce
                             prywatności dostępnej pod adresem
-                            <Link href="https://sklep.julka.fit/polityka-prywatnosci.html">https://sklep.julka.fit/polityka-prywatnosci.html</Link>
+                            <Link href="https://julka.fit/polityka-prywatnosci">https://julka.fit/polityka-prywatnosci</Link>
                         </li>
                     </ol>
                     <p className="text-center">

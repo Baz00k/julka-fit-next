@@ -12,7 +12,7 @@ function Sukces() {
                 <div>
                     <p className="fs-5 m-5">
                         E-book jest już Twój! Sprawdź maila, na który został wysłany! Jeżeli
-                        wiadomość nie przyszła – sprawdź foldery SPAM, OFERTY i inne.
+                        wiadomość nie przyszła - sprawdź foldery SPAM, OFERTY i inne.
                     </p>
                     <p className="fs-5">
                         <Link href="/sklep">Powrót do sklepu</Link>
