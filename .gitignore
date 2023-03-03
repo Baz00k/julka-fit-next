@@ -36,3 +36,6 @@ yarn-error.log*
 
 #lambda
 /lambda
+
+#generated sitemap
+/public/sitemap.xml
