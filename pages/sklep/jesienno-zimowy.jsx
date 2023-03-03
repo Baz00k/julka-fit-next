@@ -44,7 +44,7 @@ function JesiennoZimowy() {
                     <Row className="justify-content-center">
                         <h2 className="product-title">Opis produktu</h2>
                         <Col sm={12} lg={5} xl={4} className="col-xl-4 m-xl-4 p-2 gx-0">
-                            <h2 className="carousel-title">Co znajdziesz w środku?</h2>
+                            <h3 className="carousel-title">Co znajdziesz w środku?</h3>
                             <div className="carousel-wrapper">
                                 <Carousel variant="dark">
                                     {
@@ -54,9 +54,9 @@ function JesiennoZimowy() {
                             </div>
                         </Col>
                         <Col sm={12} lg={7} xl={6} className="m-xl-4 p-2 gx-0 text-start">
-                            <h2 className="carousel-title">
+                            <h3 className="carousel-title">
                                 Ten e-book jest dla Ciebie, jeśli...
-                            </h2>
+                            </h3>
                             <ul>
                                 <li>Lubisz jeść smacznie i zdrowo.</li>
                                 <li>Szukasz pomysłów na pyszne, sycące posiłki.</li>
@@ -72,7 +72,7 @@ function JesiennoZimowy() {
                                     inspiracji.
                                 </li>
                             </ul>
-                            <h2 className="carousel-title">Co znajdziesz w e-booku?</h2>
+                            <h3 className="carousel-title">Co znajdziesz w e-booku?</h3>
                             <ul>
                                 <li>
                                     Mnóstwo kreatywnych przepisów – wegańska lasagne, dyniowe leniwe z tofu czy mięciutkie muffiny marchewkowe.
@@ -92,7 +92,7 @@ function JesiennoZimowy() {
                 </section>
                 <section className="my-5">
                     <h2 className="carousel-title">Spis treści:</h2>
-                    <h2 className="carousel-title-small"><u>Wstęp</u></h2>
+                    <h3 className="carousel-title-small"><u>Wstęp</u></h3>
                     <ul>
                         <li>Spis sezonowych warzyw i owoców</li>
                         <li>Garść sposobów na jesienną chandrę</li>
@@ -101,11 +101,11 @@ function JesiennoZimowy() {
                         <li>Zanim zaczniesz gotować</li>
                         <li>Jak zrobić puree z dyni Hokkaido?</li>
                     </ul>
-                    <h2 className="carousel-title-small">
+                    <h3 className="carousel-title-small">
                         <u>
                             Na słodko:
                         </u>
-                    </h2>
+                    </h3>
                     <ul>
                         <li>Omlet dyniowy</li>
                         <li>Wegański omlet z tofu</li>
@@ -130,9 +130,9 @@ function JesiennoZimowy() {
                         <li>Najlepszy chlebek bananowy</li>
                         <li>Brownie z batata z solonym karmelem</li>
                     </ul>
-                    <h2 className="carousel-title-small">
+                    <h3 className="carousel-title-small">
                         <u>Na słono:</u>
-                    </h2>
+                    </h3>
                     <ul>
                         <li>Tosty z podsmażonym pomidorem, awokado i burratą</li>
                         <li>Tosty z domowym hummusem, smażonymi warzywami i serem feta</li>

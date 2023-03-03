@@ -45,7 +45,7 @@ function Zestaw() {
                     <Row className="justify-content-center">
                         <h2 className="product-title">Opis produktu</h2>
                         <Col sm={12} lg={5} xl={4} className="col-xl-4 m-xl-4 p-2 gx-0">
-                            <h2 className="carousel-title">Co znajdziesz w środku?</h2>
+                            <h3 className="carousel-title">Co znajdziesz w środku?</h3>
                             <div className="carousel-wrapper">
                                 <Carousel variant="dark">
                                     {
@@ -55,9 +55,9 @@ function Zestaw() {
                             </div>
                         </Col>
                         <Col sm={12} lg={7} xl={6} className="m-xl-4 p-2 gx-0 text-start">
-                            <h2 className="carousel-title">
+                            <h3 className="carousel-title">
                                 Ten zestaw jest dla Ciebie, jeśli...
-                            </h2>
+                            </h3>
                             <ul>
                                 <li>Lubisz jeść smacznie i zdrowo.</li>
                                 <li>Szukasz pomysłów na pyszne, sycące posiłki.</li>
@@ -81,7 +81,7 @@ function Zestaw() {
                                     Chcesz zaoszczędzić trochę pieniędzy 😜
                                 </li>
                             </ul>
-                            <h2 className="carousel-title">Co znajdziesz w zestawie?</h2>
+                            <h3 className="carousel-title">Co znajdziesz w zestawie?</h3>
                             <ul>
                                 <li>
                                     E-book &quot;Owsianki na wszystkie poranki&quot;
