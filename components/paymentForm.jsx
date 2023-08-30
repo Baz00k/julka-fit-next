@@ -5,53 +5,51 @@ import getStripe from '../utils/getStripe'
 
 function PaymentForm({ productID }) {
 
-    const form = useRef(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState({ message: false });
+    const form = useRef(null)
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState({ message: false })
 
     async function submit(e) {
-        setLoading(true);
-        setError({ message: false });
-        e.preventDefault();
+        setLoading(true)
+        setError({ message: false })
+        e.preventDefault()
 
         //get data from form
-        var data = {
+        const data = {
             "productID": productID,
             "name": form.current.name.value,
             "email": form.current.email.value.toLowerCase(),
             "promo_code": form.current.coupon.value,
         }
 
-        //send data to server
-        const response = await fetch(process.env.NEXT_PUBLIC_PAYMENT_DOMAIN, {
+        const paymentUrl = new URL('/payment', process.env.NEXT_PUBLIC_PAYMENT_DOMAIN)
+
+        const response = await fetch(paymentUrl.href, {
             method: 'POST',
-            mode: 'cors',
-            cache: 'no-cache',
-            credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json',
             },
             redirect: 'follow',
             referrerPolicy: 'no-referrer',
-            body: JSON.stringify(data || {})
+            body: JSON.stringify(data)
         }).then(
             response => response.json()
         ).catch(err => {
-            console.log(err);
-            return false;
-        });
+            console.log(err)
+            return false
+        })
 
         //check if response was successful
         if (response && response.statusCode === 200) {
 
-            const json = JSON.parse(response.body);
+            const json = JSON.parse(response.body)
 
             //check if coupon was valid
             if (json.error) {
 
-                setError({ message: json.error });
+                setError({ message: json.error })
                 if (json.errorMessage) {
-                    console.log(json.errorMessage);
+                    console.log(json.errorMessage)
                 }
 
             } else {
@@ -59,29 +57,29 @@ function PaymentForm({ productID }) {
                 //redirect to payment page
                 try {
                     //get stripe instance
-                    const stripe = await getStripe();
+                    const stripe = await getStripe()
                     const { error } = await stripe.redirectToCheckout({
                         sessionId: json.session.id,
-                    });
+                    })
                     //show error if redirect failed
                     if (error) {
-                        setError({ message: error.message });
+                        setError({ message: error.message })
                     }
                 } catch (error) {
                     //catch redirect error
-                    console.log(error);
-                    setError({ message: "Wystąpił błąd płatności, odśwież stronę i spróbuj ponownie" });
+                    console.log(error)
+                    setError({ message: "Wystąpił błąd płatności, odśwież stronę i spróbuj ponownie" })
                 }
 
             }
 
         } else {
             //catch server error
-            setError({ message: "Wystąpił błąd połączenia z serwerem, odśwież stronę i spróbuj ponownie" });
+            setError({ message: "Wystąpił błąd połączenia z serwerem, odśwież stronę i spróbuj ponownie" })
         }
 
         //finish loading
-        setLoading(false);
+        setLoading(false)
     }
 
     return (
@@ -93,15 +91,15 @@ function PaymentForm({ productID }) {
             </div>
             <Form.Group controlId='imie' className="mb-3">
                 <Form.Label>Imię</Form.Label>
-                <Form.Control type='text' name='name' placeholder='Wpisz swoje imię!' required />
+                <Form.Control type='text' name='name' placeholder='Wpisz swoje imię' required />
             </Form.Group>
             <Form.Group controlId='email' className="mb-3">
                 <Form.Label>E-mail</Form.Label>
-                <Form.Control type='email' pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name='email' placeholder='Wpisz swój e-mail!' required />
+                <Form.Control type='email' name='email' placeholder='Wpisz swój e-mail' required />
             </Form.Group>
             <Form.Group controlId='coupon' className="mb-3">
                 <Form.Label>Kod rabatowy</Form.Label>
-                <Form.Control type='text' name='coupon' placeholder='Wpisz kod rabatowy!' />
+                <Form.Control type='text' name='coupon' placeholder='Wpisz kod rabatowy (opcjonalne)' />
             </Form.Group>
             <Form.Group controlId='consent' className="mb-1">
                 <Form.Check type="checkbox" required inline />
@@ -143,7 +141,7 @@ function PaymentForm({ productID }) {
             }
 
         </Form>
-    );
+    )
 }
 
-export default PaymentForm;
+export default PaymentForm
